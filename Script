@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+main()
+{
+ int i, N; 
+ int nilai[50];  
+ int *trnilai;  
+ 
+ trnilai = nilai; 
+ 
+ cout << "Masukan jumlah nilai yang akan dimasukan : "; cin >> N; 
+ cout << endl << endl;
+ for (i = 0; i < N; i++) 
+ {
+  cout << "Masukan nilai ke-" << i + 1 << " : "; cin >> nilai[i];  
+ }
+ 
+ for (i = 0; i < N; i++)  
+ {
+  cout << "Elemen " << i << " nilai " << nilai[i];   
+  cout << ", Menempati alamat memori : " << &trnilai[i];   
+  cout << endl;
+ }
+ 
+ getch();
+ return 0;
+}
